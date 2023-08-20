@@ -1,0 +1,26 @@
+package cn.bugstack.springframework.beans.factory.config;
+
+import cn.bugstack.springframework.beans.factory.HierarchicalBeanFactory;
+import cn.bugstack.springframework.core.convert.ConversionService;
+import cn.bugstack.springframework.util.StringValueResolver;
+import com.sun.istack.internal.Nullable;
+
+public interface ConfigurableBeanFactory extends HierarchicalBeanFactory, SingletonBeanRegistry {
+
+    String SCOPE_SINGLETON = "singleton";
+
+    String SCOPE_PROTOTYPE = "prototype";
+
+    void addBeanPostProcessor(BeanPostProcessor beanPostProcessor);
+
+    void destroySingletons();
+
+    void addEmbeddedValueResolver(StringValueResolver valueResolver);
+
+    String resolveEmbeddedValue(String value);
+
+    void setConversionService(ConversionService conversionService);
+
+    @Nullable
+    ConversionService getConversionService();
+}

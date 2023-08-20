@@ -1,0 +1,28 @@
+实现功能：提供数据类型转换组件服务。
+最终使用效果：只需要依赖转换服务，就可以调用canConvert和convert两个方法完成操作。
+该组件服务的设计涉及到，接口的设计，工厂的使用，充分体现出了程序设计的可复用性、可扩展性的重要性。
+
+组件服务的配置需要在容器启动时，且在createBean之前完成。
+服务的配置包括：转换器的初始化、转换服务的初始化。转换服务初始化过程中会将可用的所有转换器进行注册。
+存储到一个map中，其中key是将源Class与目标Class包装起来的ConvertiblePair类，此外重写了equals和hashcode方法。
+value是相应的 转换处理器 或 转换处理器适配器 或 转换处理器工厂适配器。
+private Map<GenericConverter.ConvertiblePair, GenericConverter> converters = new HashMap<>();
+
+在用户使用时，只需要获取service服务并调用convert方法。
+如：conversionService.convert(value, targetType);
+此过程会先get到相应的converter，并调用convert方法。
+在调用convert方法过程中，会从map中取得相应的适配器，并调用适配器的convert方法。
+实现转换处理器 或 转换处理器工厂调用方法的统一。
+（ConverterAdapter和ConverterFactoryAdapter继承了GenericConverter。
+在ConverterAdapter的convert方法中，直接调用转换器的convert方法。
+在ConverterFactoryAdapter的convert方法中，会先getConverter获取转换器，再调用转换器的convert方法。）
+
+
+
+如何添加多个自定义的converter？
+组件服务会在容器启动时进行服务注册，会添加一个conversionService对象，其为ConversionServiceFactoryBean类的一个实例对象。
+在该对象的注册过程中，会进行converters的依赖注入，通过自定义ConvertersFactoryBean并在getObject方法中添加多个converter，
+作为converters的依赖。由此完成添加多个自定义的converter。
+
+
+组件服务ConversionServiceFactoryBean是一个FactoryBean，它会在组件实例创建后，生成代理对象。

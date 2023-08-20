@@ -1,0 +1,2 @@
+# 笔记
+BeanFactory可以提供获取bean对象的方法，内部实现是通过在一个hashmap中获取相应的实例对象。

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/spring-step-01/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/spring-step-02/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/spring-step-03/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/spring-step-04/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/spring-step-05/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/spring-step-06/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/spring-step-07/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/spring-step-11/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/spring-step-12/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/spring-step-18/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/spring-step-19/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/spring-step-20/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/spring-step-21/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-step-09" />
+        <module name="spring-step-08" />
+        <module name="spring-step-19" />
+        <module name="spring-step-07" />
+        <module name="spring-step-18" />
+        <module name="spring-step-02" />
+        <module name="spring-step-13" />
+        <module name="spring-step-01" />
+        <module name="spring-step-12" />
+        <module name="spring-step-11" />
+        <module name="spring-step-10" />
+        <module name="spring-step-21" />
+        <module name="spring-step-06" />
+        <module name="spring-step-17" />
+        <module name="spring-step-05" />
+        <module name="spring-step-16" />
+        <module name="spring-step-04" />
+        <module name="spring-step-15" />
+        <module name="spring-step-03" />
+        <module name="demo-test" />
+        <module name="spring-step-14" />
+        <module name="spring-step-20" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="project" target="1.8" />
+      <module name="spring-step-02 (1)" target="1.8" />
+      <module name="spring-step-02 (2)" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
